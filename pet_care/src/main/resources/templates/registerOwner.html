@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http:\\www.thymeleaf.org">
+
+<head>
+    <title>Register Pet Owner</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form th:action=@{/registerOwner} method="post" th:object="${petOwner}" >
+
+        <br>
+        <label>First Name</label>
+        <input th:field="*{firstName}" />
+        </br>
+
+        <br>
+        <label>Last Name</label>
+        <input th:field="*{lastName}"/>
+        </br>
+
+        <br>
+        <label>Email Address</label>
+        <input th:field="*{email}" />
+        </br>
+
+        <br>
+        <label>Phone Number</label>
+        <input th:field="*{phoneNumber}" />
+        </br>
+
+        <br>
+        <label>Pet Name</label>
+        <input th:field="*{petName}" />
+        </br>
+
+        <br>
+        <label>Pet Type</label>
+        <input th:field="*{petType}" />
+        </br>
+
+        <!-- TODO CHANGE MEEEEEEE -->
+        <br>
+        <label>Password</label>
+        <input type="password" th:field="*{rawPassword}" />
+        </br>
+
+        <br>
+        <button type="submit">Create Pet Owner</button>
+        </br>
+    </form>
+
+</body>
