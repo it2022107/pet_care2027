@@ -10,7 +10,7 @@ import java.time.Instant;
 
 public class PetOwner {
 
-    private Long id;
+    private Long id;  // auto generated once db is implemented
 
     private String firstName;
 
@@ -22,7 +22,7 @@ public class PetOwner {
 
     private String petName;
 
-    private String petType;
+    private String petType; //TODO change me to enum!!!!!
 
     private String rawPassword;
 

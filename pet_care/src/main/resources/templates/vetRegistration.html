@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http:\\www.thymeleaf.org">
+
+<head>
+    <title>Register Veterinarian</title>
+</head>
+
+<body>
+<h1>Registration Form</h1>
+<form th:action=@{/registerVet} method="post" th:object="${veterinarian}" >
+
+    <br>
+    <label>First Name</label>
+    <input th:field="*{firstName}" />
+    </br>
+
+    <br>
+    <label>Last Name</label>
+    <input th:field="*{lastName}"/>
+    </br>
+
+    <br>
+    <label>Email Address</label>
+    <input th:field="*{email}" />
+    </br>
+
+    <br>
+    <label>Phone Number</label>
+    <input th:field="*{phoneNumber}" />
+    </br>
+
+    <br>
+    <label>Expertise</label>
+    <input th:field="*{expertise}" />
+    </br>
+
+    <br>
+    <label>Id Photo</label>
+    <input type=file accept=".jpg, .jpeg, .pdf"  th:field="*{photoOfId}" />
+    </br>
+
+    <br>
+    <label>Licence Photo</label>
+    <input type=file accept=".jpg, .jpeg, .pdf"  th:field="*{photoOfLicence}" />
+    </br>
+
+    <br>
+    <label>Degree Photo</label>
+    <input type=file accept=".jpg, .jpeg, .pdf"  th:field="*{photoOfLicence}" />
+    </br>
+
+
+    <!-- TODO CHANGE MEEEEEEE -->
+    <br>
+    <label>Password</label>
+    <input type="password" th:field="*{rawPassword}" />
+    </br>
+
+    <br>
+    <button type="submit">Create Veterinarian </button>
+    </br>
+</form>
+
+</body>
